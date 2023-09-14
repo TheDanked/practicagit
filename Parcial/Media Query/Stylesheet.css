@@ -40,7 +40,7 @@
     font-size: 75px;
 }
 #Caja2{
-    transition: all .7s;
+    transition: all .8s;
 }
 #Caja3:hover{
     transform:translateX(150px)
