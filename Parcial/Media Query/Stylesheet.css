@@ -12,6 +12,22 @@
     float: left;
     margin: 10px;
 }
+@media screen and (min-width: 400px) and (max-width: 900px) {
+    #Caja1, #Caja2 {
+        width: calc((100% / 2) - 20px);
+    }
+    #Caja3{
+        clear: left;
+        width: calc(100% - 20px);
+    }
+    
+}
+@media screen and (max-width: 399px){
+    #Caja1,#Caja2,#Caja3 {
+        clear: left;
+        width: calc(100% - 20px);
+    }
+}
 #Caja1:hover{
     transform: rotate(50deg);
     transition: all .7s;
