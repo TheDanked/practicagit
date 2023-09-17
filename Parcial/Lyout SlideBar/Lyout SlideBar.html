@@ -1,39 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="device-witdh-witdh, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-        body{
+        body {
             width: 100vw;
             height: 100vh;
         }
-        .cont{
+        .cont {
             border: 2px solid rgb(0, 248, 83);
             background-color: rgb(255, 0, 8);
-            color: rgba(0, 0, 0, 0);
+            color: rgba(0, 0, 0, 1);
             float: left;
             height: 100%;
             position: absolute;
         }
-        #Sidebar{
-            width: 30%;
+        #Header {
+            height: 10%;
+            width: 100%; 
         }
-        #Content{
-            left: 30%;
+        #Sidebar {
+            width: 30%;
+            height: 90%; 
+            top: 10%; 
+        }
+        #Content {
             width: 70%;
-
+            height: 90%; 
+            top: 10%; 
+            left: 30%; 
         }
     </style>
 </head>
 <body>
-    <div class="cont" id = "Sidebar">Sidebar</div>
-    <div class="cont" id = "Content">Content</div>
+    <div class="cont" id="Header">Header</div>
+    <div class="cont" id="Sidebar">Sidebar</div>
+    <div class="cont" id="Content">Content</div>
 </body>
 </html>

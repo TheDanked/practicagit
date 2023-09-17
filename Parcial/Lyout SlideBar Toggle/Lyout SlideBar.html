@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="device-witdh-witdh, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+        }
+        .cont{
+            border: 2px solid rgb(0, 248, 83);
+            background-color: rgb(255, 0, 8);
+            color: rgba(0, 0, 0, 0);
+            float: left;
+            width: 20%;
+            left: 80%;
+            height: 100%;
+            position: absolute;
+        }
+        #Header{
+            clear: both;
+            width: 100%;
+            height: 10%;
+        }
+        #Sidebar{
+            width: 30%;
+        }
+        #Content{
+            left: 30%;
+            width: 70%;
+        }
+        input#Toggle{
+            display: none;
+        }
+        input:checked + div#SideBar{
+            display:none;
+        }
+        input:checked + div#SideBar{
+            display:none;
+        }
+        input:checked + div#Content{
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cont" id = "Header">Header</div>
+    <input id = "Toggle" type="checkbox">
+    <div class="cont" id = "Sidebar">Sidebar</div>
+    <div class="cont" id = "Content">
+        <label for="Toggle">Menu</label>
+        <center>Content</center>
+</div>
+</body>
+</html>
