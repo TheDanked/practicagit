@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">   
+<head>
+    <meta charset="UTF-8">
+     <meta name = "viewport" content="width=device, initial-scale=1.0">
+    <title>Document</title>
+   
+        <style>
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            table{
+                width: 100%;
+            }
+            table, thead, tbody, tr, th, td{
+                border: 1px solid rgb(0, 0, 0);
+                border-collapse: collapse;
+            }
+            tbody tr:nth-child(even){
+                background-color:rgb(17, 17, 132);
+                color: whitesmoke;
+            }
+
+            tbody tr:nth-child(odd){
+                background-color:rgb(19, 126, 57);
+                color: whitesmoke;
+            }
+                    
+            @media screen and (max-width:600px) {
+
+                table, thead, tbody, tr, th, td {
+                    display: block;
+                }
+
+                thead {
+                    display: none;
+                }
+
+                td {
+                    padding-left: 50%;
+                }
+
+                td:nth-child(1){padding-left: 0; text-align: center; background-color:aliceblue; color:black;}
+                td:nth-child(2)::before{content:"Juego 1";position: absolute; left: 10px;}
+                td:nth-child(3)::before{content:"Juego 2";position: absolute; left: 10px;}
+                td:nth-child(4)::before{content:"Juego 3";position: absolute; left: 10px;}
+                td:nth-child(5)::before{content:"Juego 4";position: absolute; left: 10px;}
+            }
+            
+        </style>
+ </head>
+ <body>
+    <table>
+    <thead>
+        <tr>
+            <th>Año</th>
+            <th>Juego 1</th>
+            <th>Juego 2</th>
+            <th>Juego 3</th>
+            <th>Juego 4</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>2013</td>
+            <td>The last of Us</td>
+            <td>GTA V</td>
+            <td>Smash Bros</td>
+            <td>Pokemon X</td>
+        </tr>
+        <tr>
+            <td>2014</td>
+            <td>Far Cry 4</td>
+            <td>Asassins Creed 4</td>
+            <td>Call of Duty Advance Warfare</td>
+            <td>Fifa 14</td>
+        </tr>
+        <tr>
+            <td>2015</td>
+            <td>Call of Duty Black Ops III</td>
+            <td>Fallout 4</td>
+            <td>Rocket League</td>
+            <td>Xenoverse I</td>
+        </tr>
+        <tr>
+            <td>2017</td>
+            <td>Zelda</td>
+            <td>Fornite</td>
+            <td>Fifa 17</td>
+            <td>Assasins Creed Origins</td>
+        </tr>
+    </tbody>
+</table>
+    </body>
+    </html>
