@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo de Selector Adyacente</title>
+    <style>
+        /* Aplicar estilos solo al párrafo (p) que sigue inmediatamente a un encabezado h2 */
+        h2 + p {
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <h2>Título 1</h2>
+    <p>Este párrafo sigue inmediatamente al encabezado h2.</p>
+    <h2>Título 2</h2>
+    <span>Este elemento no es un párrafo.</span>
+    <p>Este párrafo no sigue inmediatamente al encabezado h2.</p>
+    <h2>Título 3</h2>
+</body>
+</html>

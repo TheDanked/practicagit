@@ -5,6 +5,9 @@
 }
 
 .Contenedor{
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
     height: 100vh;
     display: flex;
     flex-direction: row;

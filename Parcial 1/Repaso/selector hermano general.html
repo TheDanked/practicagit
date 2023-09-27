@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo de Selector de Hermanos Generales</title>
+    <style>
+        /* Aplicar estilos a todos los párrafos (p) que son hermanos de un encabezado h2 */
+        h2 ~ p {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h2>Título 1</h2>
+    <p>Este es un párrafo hermano del encabezado h2.</p>
+    <p>Este es otro párrafo hermano del mismo encabezado h2.</p>
+    <h2>Título 2</h2>
+    <p>Este es un párrafo hermano de otro encabezado h2.</p>
+    <span>Este elemento no es un párrafo.</span>
+    <p>Este es otro párrafo hermano del segundo encabezado h2.</p>
+</body>
+</html>
+
+<!--
+Selector de Descendiente (espacio " "):
+
+Selecciona elementos que son descendientes directos o indirectos de otro elemento.
+Utiliza un espacio entre los selectores.
+Aplica el estilo a todos los elementos coincidentes en la jerarquía descendiente.
+Ejemplo: div p selecciona todos los elementos <p> dentro de cualquier elemento <div>.
+
+Selector de Hijo (">"):
+
+Selecciona elementos que son hijos directos de otro elemento.
+Utiliza el signo ">" entre los selectores.
+Aplica el estilo solo a los elementos que son hijos directos, sin importar la profundidad.
+Ejemplo: div > p selecciona solo los elementos <p> que son hijos directos de un elemento <div>.
+
+Selector Adyacente ("+"):
+
+Selecciona un elemento que es un hermano inmediato de otro elemento con el mismo elemento padre.
+Utiliza el signo "+" entre los selectores.
+Aplica el estilo al elemento inmediatamente posterior.
+Ejemplo: h2 + p selecciona el primer elemento <p> que sigue inmediatamente a un elemento <h2>.
+
+Selector de Hermanos Generales ("~"):
+
+Selecciona todos los elementos que son hermanos de otro elemento con el mismo elemento padre.
+Utiliza el símbolo "~" entre los selectores.
+Aplica el estilo a todos los elementos coincidentes que son hermanos del elemento de referencia.
+Ejemplo: h2 ~ p selecciona todos los elementos <p> que son hermanos de un elemento <h2>.*/

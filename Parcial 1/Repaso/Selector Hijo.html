@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo de Selector de Hijo</title>
+    <style>
+        /* Aplicar estilos solo a los párrafos (p) que son hijos directos de divs */
+        div > p {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Este es un párrafo hijo directo de un div.</p>
+        <p>Este es otro párrafo hijo directo del mismo div.</p>
+        <div>
+            <p>Este es un párrafo dentro de otro div, pero no es hijo directo.</p>
+        </div>
+    </div>
+</body>
+</html>
