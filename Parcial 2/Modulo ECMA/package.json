@@ -1,17 +1,13 @@
 {
-  "name": "practicagit",
+  "name": "modulo-ecma",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "areas.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@miaos/catsay": "^0.1.2",
-    "dogsay": "^2.2.4",
-    "lol": "^1.0.101-lol"
-  }
+  "type": "module"
 }
