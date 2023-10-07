@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyout Slide Bar</title>
+    <style>
+       *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.head{
+    background-color: blue;
+    border: 2px solid rgb(0, 0, 0);
+    height: 10%;
+    width: 100%;
+}
+
+.cont{
+    border: 2px solid rgb(0, 0, 0);
+    background-color: blue;
+    color: rgb(0, 0, 0);
+    height: 100%;
+
+}
+
+#SideBar{
+    background-color: blue;
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+#Content{
+    background-color: blue;
+    border: 2px solid rgb(0, 0, 0);
+    width: 80%;
+    height: 100%;
+    float: left;
+}
+.SideBarEscondido{
+    display: none;
+}
+.SideBarRevelado{
+    width: 100% !important;
+}
+    </style>
+</head>
+<body>
+    <div class="head" id="Header">Header</div>
+    <div class="cont" id="SideBar">SideBar</div>
+    <div class="cont" id="Content">
+        <button id="btn" type="button">ToggleMenu</button>
+        <h3>contenido</h3>
+    </div>
+    <script>
+        document.getElementById("btn").addEventListener("click", function(){
+            console.log("click en el boton")
+            document.getElementById("SideBar").classList.toggle("SideBarEscondido");
+            document.getElementById("SideBar").classList.toggle("SideBarRevelado");
+        });
+    </script>
+</body>
+</html>
