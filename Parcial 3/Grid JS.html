@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.Contenedor{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    background-color: blue;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 30% 30% 30%;
+    justify-content: center;
+    align-content: center;
+    justify-items: stretch;
+    align-items: stretch;
+    gap: 0px;
+}
+.Caja{
+background-color: brown;
+border: 1px solid black;
+font-size: 120px;
+text-align: center;
+line-height: 2em;
+}
+#Caja11{
+    align-self: center;
+    justify-self: center;
+}
+    </style>
+</head>
+<body>
+    <div id ="cont" class="Contenedor">
+        <div class="Caja" id="Caja1"></div>
+        <div class="Caja" id="Caja2"></div>
+        <div class="Caja" id="Caja3"></div>
+        <div class="Caja" id="Caja4"></div>
+        <div class="Caja" id="Caja5"></div>
+        <div class="Caja" id="Caja6"></div>
+        <div class="Caja" id="Caja7"></div>
+        <div class="Caja" id="Caja8"></div>
+        <div class="Caja" id="Caja9"></div>
+        <div id="Caja10"> </div>
+        <div id="Caja11"> <button id="btnLim" type="button">Limpiar</button></div>
+        <div id="Caja12"> </div>
+        </div>
+        <script>
+            // var xo="X";
+            // document.getElementById("cont").addEventListener("click",function(e){        
+            //     console.log(e.target.id);
+            //     if (document.getElementById(e.target.id).innerText==""){
+            //     if (xo=="X") {xo="O"} else {xo="X"}
+            //     document.getElementById(e.target.id).innerText=xo;
+            //     }
+            // })
+            // document.getElementById("btnLim").addEventListener("click",function(){
+            // let cajas = document.getElementsByClassName("Caja");
+            // for (const elemento of cajas){
+            //     elemento.innerText="";
+            // }
+            // })
+            $(document).ready(function(){
+             var xo ="X";
+            $("#cont").click(function(e){
+
+        if ($(e.target).text() == ""){
+            if (xo == "X") {
+                xo = "O";
+            } else {
+                xo = "X";
+            }
+            $(e.target).text(xo);
+        }
+    });
+
+    $("#btnLim").click(function(){
+
+        $(".Caja").each(function(){
+            console.log(this);
+
+            for (const elemento of $(".Caja")){
+                elemento.innerText = "";
+            }
+        });
+    });
+});
+    
+        </script>
+    </body>
+</html>
