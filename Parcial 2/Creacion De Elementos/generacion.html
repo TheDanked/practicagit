@@ -1,25 +1,43 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tabla de Películas</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
     <div id="contenedor"></div>
     <script>
-        let encabezados = ['Nombre', 'ApellidoP', 'ApellidoM'];
+        let encabezados = ['Película', 'Año'];
         let datos = [{
-            nombre: "Daniel",
-            apellidop: "Ledezma",
-            apellidom: "Villanueva"
+            pelicula: "Sonic The Hedhehog",
+            año: 2020
         }, {
-            nombre: "Daniel",
-            apellidop: "Ledezma",
-            apellidom: "Villanueva"
+            pelicula: "Spider-Man No Way Home",
+            año: 2021
         }, {
-            nombre: "Daniel",
-            apellidop: "Ledezma",
-            apellidom: "Villanueva"
+            pelicula: "Avengers ENDGAME",
+            año: 2019
         }];
 
         let tab = document.createElement("table");
@@ -39,16 +57,12 @@
             let fil = document.createElement("tr");
 
             let td1 = document.createElement("td");
-            td1.innerText = elemento.nombre;
+            td1.innerText = elemento.pelicula;
             fil.appendChild(td1);
 
             let td2 = document.createElement("td");
-            td2.innerText = elemento.apellidop;
+            td2.innerText = elemento.año;
             fil.appendChild(td2);
-
-            let td3 = document.createElement("td");
-            td3.innerText = elemento.apellidom;
-            fil.appendChild(td3);
 
             tbody.appendChild(fil);
         });
