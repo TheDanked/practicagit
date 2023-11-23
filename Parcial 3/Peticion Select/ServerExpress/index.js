@@ -13,7 +13,7 @@ const conexion = mysql.createConnection({
     port: 3306
 });
 
-conexion.query("SELECT * FROM actor",
+conexion.query("SELECT * FROM actor LIMIT 20",
 function(err,results,fields){
     console.log(results)
     console.log(fields)

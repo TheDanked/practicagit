@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ $('#table').bootstrapTable({
+    url: 'http://localhost:8082/actor',
+    columns:[{ field: 'idUsuario', title: 'ID' },
+            { field: 'nombre', title: 'Nombre' },
+            { field: 'apPaterno', title: 'Apellido Pat' },
+            { field: 'apMaterno', title: 'Apellido Mat' },
+            { field: 'login', title: 'Login' },
+            { field: 'password', title: 'Pass' }]
+    })
+    </script>
+</body>
+</html>

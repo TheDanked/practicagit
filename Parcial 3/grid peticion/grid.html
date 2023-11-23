@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="wrapper"></div>
+    <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+    <script>
+        new gridjs.Grid({
+        columns: ['Actor', 'Nombre ', 'Apellido', 'Actualizacion'],
+        server: {
+        url: 'http://localhost:8082/actor',
+        then: data => data.results.map(actor => [actor.actor_id, actor.first_name, actor.last_name, actor.last_update])
+    } 
+      }).render(document.getElementById("wrapper"));
+  </script>
+</body>
+</html>
