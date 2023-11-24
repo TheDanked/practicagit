@@ -23,9 +23,6 @@ function(err,results,fields){
 );
 
 });
-
-
-
 app.post('/actor',(req,res)=>{
 res.json({mensaje: "Server express respondiendo a post"})
 });

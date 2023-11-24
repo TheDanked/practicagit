@@ -14,7 +14,7 @@
         columns: ['Actor', 'Nombre ', 'Apellido', 'Actualizacion'],
         server: {
         url: 'http://localhost:8082/actor',
-        then: data => data.results.map(actor => [actor.actor_id, actor.first_name, actor.last_name, actor.last_update])
+        then: data => data.map(actor => [actor.actor_id, actor.first_name, actor.last_name, actor.last_update])
     } 
       }).render(document.getElementById("wrapper"));
   </script>
