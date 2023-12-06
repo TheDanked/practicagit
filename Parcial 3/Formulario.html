@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Consulta de Actores</title>
+    <style>
+        #Contenedor {
+            width: 50vw;
+            margin: auto; 
+            margin-top: 50px; 
+        }
+    </style>
+</head>
+<body>
+    <div id="Contenedor">
+        <form id="actorForm" action="http://localhost:8082/actor" method="GET">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Actor ID</label>
+                <input type="text" class="form-control" name="actor" id="actor" aria-describedby="emailHelp" placeholder="Ingresa el Actor ID">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Nombre</label>
+                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingresa el Nombre">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Apellido</label>
+                <input type="text" class="form-control" name="apellido" id="apellido" placeholder="Ingresa el Apellido">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Actualizacion</label>
+                <input type="text" class="form-control" name="actualizacion" id="actualizacion" placeholder="Ingresa la Actualizacion">
+            </div>
+            
+            <button type="button" class="btn btn-primary" onclick="consultarActor()">Consulta</button>
+        </form>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI/t1oFVu9r1dxJ02ZObhPQfnfXSqR5A8hXcA9g8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script>
+        function consultarActor() {
+            var actorId = $("#actor").val();
+            $.get("http://localhost:8082/actor", { actor: actorId }, function(data) {
+                if (data && data.length > 0) {
+                    // Tomar el primer elemento del array, asumiendo que solo se espera un resultado
+                    var actorData = data[0];
+
+                    $("#nombre").val(actorData.first_name);
+                    $("#apellido").val(actorData.last_name);
+                    $("#actualizacion").val(actorData.last_update);
+                } else {
+                    $("#nombre, #apellido, #actualizacion").val('');
+                    alert('No se encontraron datos para el Actor ID proporcionado.');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
